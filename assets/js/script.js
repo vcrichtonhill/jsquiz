@@ -1,4 +1,4 @@
-var highScores = JSON.parse(localStorage.getItem("highScores")) || []
+var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 
 // question array
 const questions = [
@@ -21,6 +21,7 @@ const questions = [
 
 var startBtn = document.querySelector("#start");
 var answers = document.querySelector("#answers");
+var scoreDisplay = document.querySelector("#score-display")
 var setNumber = 0;
 var time = 75;
 var timeEl = document.getElementById("timer");
@@ -69,16 +70,25 @@ function runTimer() {
         time = 0
         clearInterval(timeInterval);
     }
-    console.log(time)
 }
 
 function endGame() {
     clearInterval(timeInterval);
     var scoreObject = {
-        initials:"VCH",
-        score:time
+        initials: window.prompt("Please enter your initials."),
+        score: time
     }
     highScores.push(scoreObject)
     localStorage.setItem("highScores", JSON.stringify(highScores))
-    console.log(localStorage)
+    highScores.sort(function(a, b){
+        return b.score - a.score;
+    });
+    displayScores();
+}
+
+function displayScores() {
+    answers.setAttribute("style", "display: none")
+    var scoreEl = document.createElement("li");
+    scoreEl.textContent = highScores.initials + ": " + highScores.time;
+    scoreDisplay.append(scoreEl);
 }
