@@ -22,11 +22,11 @@ const questions = [
 var startBtn = document.querySelector("#start");
 var answers = document.querySelector("#answers");
 var scoreDisplay = document.querySelector("#score-display")
+var tryAgain = document.querySelector("#play-again")
 var setNumber = 0;
 var time = 75;
 var timeEl = document.getElementById("timer");
 var timeInterval;
-console.log(startBtn)
 
 startBtn.addEventListener("click", function(){
     timeInterval = setInterval(runTimer, 1000)
@@ -92,5 +92,5 @@ function displayScores() {
     for (let i = 0; i < highScores.length; i++) {
         scoreEl.textContent = highScores[setNumber].initials + ": " + highScores[setNumber].score;
         scoreDisplay.append(scoreEl);
-    }        
+    }    
 }
