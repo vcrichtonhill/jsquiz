@@ -79,6 +79,7 @@ var populateQuestion = function() {
         var button = document.createElement("button")
         button.textContent = choice
         button.setAttribute("value", choice)
+        button.classList.add("btn", "btn-light", "m-3")
         button.onclick = function() {
             if(this.value === questions[setNumber].answer) {
                 console.log("correct")

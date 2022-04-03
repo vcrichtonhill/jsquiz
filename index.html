@@ -10,7 +10,7 @@
 </head>
 <body class="bg-dark text-light">
     <header>
-        <h4>Timer:<span id="timer"> 75</span></h4>
+        <h4 class="col-1 p-3 m-5 border border-light rounded">Timer:<span id="timer"> 75</span></h4>
     </header>
 
     <main>
@@ -18,10 +18,13 @@
             <div class="col-12">
                 <h2 id="question">Coding Quiz Challenge</h2>
             </div>
-            <div id="answers" class="col-4">
-                <p>Do your best to solve this quiz in the time limit! Each wrong answer wll take 10 seconds off of your timer. Good luck!</p>
+            <div id="answers" class="col-12 py-3 px-5">
+                <p>Do your best to solve this quiz in the time limit! Each wrong answer will take 10 seconds off of your timer. Good luck!</p>
+                <div class="m-3">
+                 <input class="btn btn-light" id="start" type="submit" value="Start Quiz">   
+                </div>
+            
             </div>
-            <input id="start" type="submit" value="Start Quiz">
         </div>        
     </main>
 
