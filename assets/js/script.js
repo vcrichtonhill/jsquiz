@@ -89,6 +89,8 @@ function endGame() {
 function displayScores() {
     answers.setAttribute("style", "display: none")
     var scoreEl = document.createElement("li");
-    scoreEl.textContent = highScores.initials + ": " + highScores.time;
-    scoreDisplay.append(scoreEl);
+    for (let i = 0; i < highScores.length; i++) {
+        scoreEl.textContent = highScores[setNumber].initials + ": " + highScores[setNumber].score;
+        scoreDisplay.append(scoreEl);
+    }        
 }
