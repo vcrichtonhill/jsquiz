@@ -16,6 +16,41 @@ const questions = [
         text: "Where is the correct place to insert a JavaScript?",
         choices: ["It will work in the <head> or the <body>", "the <body> section", "the <head> section"],
         answer: "the <body> section"
+    },
+    {
+        text: "The external JavaScript file must contain the <script> tag.",
+        choices: ["True", "False"],
+        answer: "True"
+    },
+    {
+        text: "How do you create a function in JavaScript?",
+        choices: ["function = myFunction()", "function:myFunction()", "function myFunction()"],
+        answer: "function = myFunction()"
+    },
+    {
+        text: "How do you call a function named 'myFunction'?",
+        choices: ["call myFunction()", "myFunction()", "call function myFunction()"],
+        answer: "myFunction()"
+    },
+    {
+        text: "How does a FOR loop start?",
+        choices: ["for (i=0; i<=5", "for i= 1 to 5", "for (i=0; i <= 5; i++)", "for (i <= 5; i++)"],
+        answer: "for (i=0; i <= 5; i++)"
+    },
+    {
+        text: "How can you add a comment in a JavaScript?",
+        choices: ["//This is a comment", "<!-- This is a comment -->", "'This is a comment"],
+        answer: "//This is a comment"
+    },
+    {
+        text: "What is the correct way to write a JavaScript array?",
+        choices: ["var colors = (1:'red', 2:'green, 3:'blue')", "var colors = 'red', 'green', 'blue'", "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')", "var color = ['red', 'green', 'blue']"],
+        answer: "var color = ['red', 'green', 'blue']"
+    },
+    {
+        text: "How do you declare a JavaScript variable?",
+        choices: ["v carName;", "variable carName;", "var carName;"],
+        answer: "var carName;"
     }
 ];
 
